@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Майбутнє Технологій</title>
+</head>
+<body>
+    <div class="game-container">
+        <button onclick="toggleSidePanel()">Відкрити панель навичок</button>
+        <button onclick="toggleSidePanelRight()">Відкрити панель технологій</button>
+        <h1>Ласкаво просимо в Майбутнє Технологій України!</h1>
+        <div id="side-panel" class="side-panel">
+            <h2>Доступні Навички:</h2>
+            <ul id="skills-list"></ul>
+            <h2>Досягнення:</h2>
+            <ul id="achievements-list"></ul>
+            
+        </div>
+        <div id="side-panel-right" class="side-panel-right">
+            <h2>Доступні технології:</h2>
+            <ul id="technologies-list"></ul>
+        </div>
+        <div id="game-screen">
+            <!-- Гра буде рендерити сюди -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

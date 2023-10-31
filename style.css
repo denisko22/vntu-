@@ -1,0 +1,105 @@
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.side-panel {
+    position: fixed;
+    top: 0;
+    overflow: scroll;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background-color: #fff;
+    padding: 2em;
+    border-right: 2px solid #333;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    transition: left 0.3s ease-in-out;
+}
+.side-panel-right {
+    position: fixed;
+    top: 0;
+    right:  -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background-color: #fff;
+    padding: 2em;
+    border-left: 2px solid #333;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    transition: right 0.3s ease-in-out;
+}
+
+#game-screen {
+    width: 100%;
+    padding: 2em;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin-top: 2em;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+}
+
+
+
+#show-panel-button:hover {
+    background-color: #45a049;
+}
+
+.show-panel {
+    left: 0;
+}
+.show-panel-right {
+    right: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* стилі для менших екранів */
+@media (max-width: 768px) {
+    .game-container {
+        width: 90%;
+    }
+
+    .side-panel {
+        width: 50%;
+    }
+}
